@@ -8,9 +8,10 @@ confluent-hub install --no-prompt \
     --component-dir /app/libs --worker-configs /app/resources/connect-distributed.properties -- \
     confluentinc/kafka-connect-jdbc:10.7.2
 
-curl -LSs https://cdn.mysql.com//Downloads/Connector-J/mysql-connector-j-8.0.33.tar.gz | tar xz
-mv mysql-connector-j-8.0.33/mysql-connector-j-8.0.33.jar /app/libs/confluentinc-kafka-connect-jdbc/
-rm -rf mysql-connector-j-8.0.33/
+curl -o /app/libs/confluentinc-kafka-connect-jdbc/lib/mysql-connector-j-8.0.33.jar \
+    https://repo1.maven.org/maven2/com/mysql/mysql-connector-j/8.0.33/mysql-connector-j-8.0.33.jar
+curl -o /app/libs/confluentinc-kafka-connect-jdbc/lib/mariadb-java-client-3.1.4.jar \
+    https://repo1.maven.org/maven2/org/mariadb/jdbc/mariadb-java-client/3.1.4/mariadb-java-client-3.1.4.jar
 EOF
 
 WORKDIR /
