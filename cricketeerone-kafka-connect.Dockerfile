@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1.4
-FROM docker.io/cricketeerone/apache-kafka-connect:3.4.0-confluent-hub@sha256:90d5e0a449ec73ebd0def24dcb3f5bb18e446e137b9a2d8e7f9aff3f9f7168cd
+FROM docker.io/cricketeerone/apache-kafka-connect:3.4.1-confluent-hub@sha256:eae93ece47632b6d94e9fc40defeb4919549d644bab90fe6c5b5c31cc22075d9
 
 WORKDIR /tmp
 
